@@ -1,0 +1,153 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header section styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns the logo and login button */
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow here */
+}
+
+.logo img {
+    height: 70px; /* Adjusts the height of the logo image */
+    width: auto; /* Keeps the aspect ratio of the logo */
+}
+
+nav {
+    flex-grow: 1; /* Allows nav to take up remaining space */
+    display: flex;
+    justify-content: center; /* Centers the navigation items */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+.login {
+    display: none; /* Hide login by default */
+}
+
+/* Styling for buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #202258;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button i {
+    margin-right: 8px;
+}
+
+button:hover {
+    background-color: #272a7a;
+}
+
+/* Styling for the hamburger menu */
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* For tablets and below */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the menu by default on small screens */
+    }
+
+    nav.active ul {
+        position: sticky;
+        display: block; /* Display the menu when active class is added */
+        background-color: #151567; /* Set a background color for the active menu */
+        width: auto;/* Optional: Add padding for better spacing */
+        
+    }
+    nav ul li a{
+        color: #fff;
+    }
+
+
+    nav ul li {
+        margin: 10px 0;
+        
+    }
+
+    .login {
+        display: block; /* Show login button on small screens */
+        margin-top: 10px;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on small screens */
+        margin-right: auto;
+        font-size: 30px;
+        margin-top: -50px;
+    }
+
+    .buttons {
+        display: none; /* Hide the button on small screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 50px; /* Slightly reduce logo size on mobile */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .menu-icon {
+        left: 10px; /* Position hamburger menu closer to the left */
+    }
+}

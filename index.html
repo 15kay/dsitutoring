@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assest/img/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>DSI TUTORING ACADEMY</title>
+</head>
+<body>
+    <section class="header">
+        <!-- Logo on the left -->
+        <div class="logo">
+            <a href="index.html"><img src="assest/img/logo.svg" alt="DSI TUTORING ACADEMY"></a>
+        </div>
+
+        <!-- Hamburger menu icon -->
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i> <!-- Hamburger Icon -->
+        </div>
+
+        <!-- Navigation menu -->
+        <nav id="nav-links">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-book-open"></i> Modules</a></li>
+                <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> Tutors</a></li>
+                <li class="login"><a href=""><i class="fas fa-sign-in-alt"></i>Login / Register</a></li>
+            </ul>
+            
+        </nav>
+       <div class="buttons">
+            <button onclick="location.href='login.html'"><i class="fas fa-sign-in-alt"></i> Login / Register</button>
+        </div>
+        <!-- Login/Register button under the menu items in responsive mode -->
+        
+    </section>
+
+    <section class="hero-section">
+        <!-- Hero section content can go here -->
+    </section>
+
+    <script>
+        // Toggle the navigation menu when the hamburger is clicked
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
